@@ -8,7 +8,7 @@ A minimal React-powered frontend application designed to demonstrate real-time i
 * **State Management:** Uses React's standard state hooks to capture and stream text input dynamically.
 
 ## Tech Stack
-* **Frontend Library:** React
+* **Frontend:** React
 * **Build Tool:** Vite
 
 ## Getting Started
