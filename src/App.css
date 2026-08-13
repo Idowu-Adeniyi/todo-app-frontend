@@ -110,12 +110,40 @@ section .container {
   cursor: not-allowed;
 }
 
-.list-content {
-  width: 100%;
-  padding-left: 30px;
+.todo-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: center;
+  list-style-type: none;
+}
+
+.task-items,
+input {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: rgb(61, 45, 39);
 }
 
 .list-content li {
   padding-left: 20px;
   font-family: "Bubblegum Sans", cursive;
+}
+
+.list-content {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.list-content button {
+  color: white;
+  background-color: rgb(227, 74, 74);
+  border: none;
+  direction: float-right;
+  border-radius: 5px;
+  width: 60px;
+  height: 30px;
+  margin-left: 20px;
+  cursor: pointer;
 }

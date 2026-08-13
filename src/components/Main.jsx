@@ -30,8 +30,8 @@ function Main(props) {
         <ul>
           {props.todos.map((todo) => {
             return (
-              <li key={todo.id} id={todo.id}>
-                {todo.task}
+              <li key={todo.id} id={todo.id} className="todo-item">
+                <span className="task-items">{todo.task}</span>
                 <button onClick={() => props.deleteTask(todo.id)}>
                   Delete
                 </button>
