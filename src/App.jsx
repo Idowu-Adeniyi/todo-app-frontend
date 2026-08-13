@@ -41,12 +41,19 @@ function App() {
     };
 
     setTodos((prevTodo) => {
-      console.log(prevTodo);
       return [...prevTodo, newTodo]; // we use [] here because we stated our state data with array
     });
     //CHANGED: Wipes out the text box by setting the string back to completely empty
     setTaskInput("");
     console.log(newTodo);
+  }
+
+  function deleteTask(targetId) {
+    setTodos((prevTodo) => {
+      return prevTodo.filter((todo) => {
+        return todo.id !== targetId;
+      });
+    });
   }
 
   return (
@@ -58,6 +65,7 @@ function App() {
             handleForm={handleForm}
             handleChange={handleChange}
             taskInput={taskInput}
+            deleteTask={deleteTask}
           />
         </div>
       </section>

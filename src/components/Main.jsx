@@ -29,7 +29,14 @@ function Main(props) {
       <div className="list-content">
         <ul>
           {props.todos.map((todo) => {
-            return <li key={todo.id}>{todo.task}</li>;
+            return (
+              <li key={todo.id} id={todo.id}>
+                {todo.task}
+                <button onClick={() => props.deleteTask(todo.id)}>
+                  Delete
+                </button>
+              </li>
+            );
           })}
         </ul>
       </div>
